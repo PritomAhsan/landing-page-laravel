@@ -1,10 +1,9 @@
 # Quick Start - Project With Laravel 8.x and AdminLTE 3 (feat. Docker)
-[Cursos de Laravel  - PT-BR](https://academy.especializati.com.br/buscar/laravel)
 
 ### Step by step
 Clone this Repository
 ```sh
-git clone https://github.com/especializati/quick-start-laravel-8-and-adminlte4.git my-project
+git clone 
 ```
 
 Create the .env file
