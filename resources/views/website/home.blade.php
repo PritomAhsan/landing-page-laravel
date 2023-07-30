@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Amoeba Bootstrap Template - Home</title>
+  <title>INDIGODYE</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -35,7 +35,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Amoeba</a></h1>
+        <h1><a href="index.html"><img src="{{asset('assets/img/Picture1.png')}}"></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -58,8 +58,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <h1>Welcome to Amoeba</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <h1>INDIGODYE SOURCES</h1>
+      <h2>We are an Apparel Buying and Sourcing company</h2>
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
     </div>
   </section><!-- #hero -->
@@ -74,26 +74,25 @@
           <h2>About Us</h2>
         </div>
 
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-lg-6 order-1 order-lg-2">
             <img src="assets/img/about-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>A Vision for The Future</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+                The Best All types of Apparels at The Best Price Possible & The Best Service
             </p>
             <ul>
-              <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check2-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check2-circle"></i> We are a global apparel buying and sourcing company from Bangladesh since 2018.</li>
+              <li><i class="bi bi-check2-circle"></i> Through the years we have created a platform for brand and retailers of the glob where CUSTOMER can trust us.</li>
+              <li><i class="bi bi-check2-circle"></i> Our mission is to be a global leader in the area of apparel buying and sourcing.</li>
             </ul>
-            <p>
+            {{-- <p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            </p> --}}
           </div>
         </div>
 
@@ -105,40 +104,53 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>We Offer</h2>
+          <p>Mag?nam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box">
+          <div class="col-lg-3 col-md-6 icon-box">
             <div class="icon"><i class="bi bi-cpu"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="#">PARTNERSHIP</a></h4>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box">
+          <div class="col-lg-3 col-md-6 icon-box">
             <div class="icon"><i class="bi bi-clipboard-data"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <h4 class="title"><a href="#">DESIGN &
+                INNOVATION
+                </a></h4>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box">
+          <div class="col-lg-3 col-md-6 icon-box">
             <div class="icon"><i class="bi bi-globe"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <h4 class="title"><a href="#">PRODUCT
+                DEVELOPMENT
+                </a></h4>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box">
+          <div class="col-lg-3 col-md-6 icon-box">
             <div class="icon"><i class="bi bi-images"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <h4 class="title"><a href="#">COSTING
+            </a></h4>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box">
+          <div class="col-lg-3 col-md-6 icon-box">
             <div class="icon"><i class="bi bi-sliders"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            <h4 class="title"><a href="#">MANAGING
+                SUPPLY CHAIN
+                </a></h4>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box">
+          <div class="col-lg-3 col-md-6 icon-box">
             <div class="icon"><i class="bi bi-building"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <h4 class="title"><a href="#">QUALITY
+                ASSURANCE
+                </a></h4>
+          </div>
+          <div class="col-lg-3 col-md-6 icon-box">
+            <div class="icon"><i class="bi bi-building"></i></div>
+            <h4 class="title"><a href="#">COMPLAINCE
+            </a></h4>
+          </div>
+          <div class="col-lg-3 col-md-6 icon-box">
+            <div class="icon"><i class="bi bi-building"></i></div>
+            <h4 class="title"><a href="#">DELIVER
+            </a></h4>
           </div>
         </div>
 
@@ -150,9 +162,9 @@
       <div class="container">
 
         <div class="text-center">
-          <h3>Call To Action</h3>
+          <h3>Our profile</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
+          <a class="cta-btn" href="#">Download</a>
         </div>
 
       </div>
@@ -302,73 +314,69 @@
     </section><!-- End Our Portfolio Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq section-bg">
-      <div class="container">
+        <section id="clients" class="clients section-bg">
+            <div class="container">
 
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-        </div>
+                <div class="section-title">
+                    <h2>Clients</h2>
+                  </div>
 
-        <ul class="faq-list">
+              <div class="row no-gutters clearfix wow fadeInUp">
 
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+
+              </div>
+
             </div>
-          </li>
+          </section>
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-      </div>
-    </section><!-- End Frequently Asked Questions Section -->
+      <!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team">
@@ -388,12 +396,7 @@
               <p>
                 Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
               </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
+
             </div>
           </div>
 
@@ -405,12 +408,7 @@
               <p>
                 Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
               </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
+
             </div>
           </div>
 
@@ -422,12 +420,7 @@
               <p>
                 Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
               </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
+
             </div>
           </div>
 
@@ -442,15 +435,15 @@
 
         <div class="section-title">
           <h2>Contact Us</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
         </div>
 
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
             <div class="contact-about">
-              <h3>Amoeba</h3>
-              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <h3>INDIGODYE SOURCES</h3>
+              <p>We are an Apparel Buying and Sourcing company</p>
               <div class="social-links">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -464,17 +457,18 @@
             <div class="info">
               <div>
                 <i class="bi bi-geo-alt"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>House 31, Road 09, Section 2,<br>
+                    Mirpur, Dhaka-1216, Bangladesh</p>
               </div>
 
               <div>
                 <i class="bi bi-envelope"></i>
-                <p>info@example.com</p>
+                <p>ruhin@indigodyesources.com</p>
               </div>
 
               <div>
                 <i class="bi bi-phone"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+8801799467987</p>
               </div>
 
             </div>
@@ -519,14 +513,11 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Amoeba</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>INDIGODYE</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-one-page-bootstrap-template-amoeba/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+        Designed by <a href="{{url('/')}}">INDIGODYE SOURCES</a>
       </div>
     </div>
   </footer><!-- End #footer -->
