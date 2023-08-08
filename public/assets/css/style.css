@@ -158,12 +158,12 @@ section {
   height: 80px;
   z-index: 997;
   transition: all 0.5s;
-  background: #2d6760;
+  background: #859795
 }
 
 #header.header-scrolled {
-  background: #1d443f;
-  height: 60px;
+  background: #859795;
+  /* height: 60px; */
 }
 
 #header .logo h1 {
@@ -185,11 +185,12 @@ section {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 90px;
+  margin-top: 10px;
+  /* max-height: 90px; */
 }
 
 #main {
-  margin-top: 80px;
+  margin-top: 0px;
 }
 
 /*--------------------------------------------------------------
@@ -415,90 +416,168 @@ section {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 75vh;
-  background: url("../img/hero-background.jpg") top center;
-  background-size: cover;
-  position: relative;
-  margin-bottom: -80px;
-}
-
-#hero:before {
-  content: "";
-  background: rgba(112, 185, 176, 0.85);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .hero-container {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  padding-top: 80px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-#hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 56px;
-  color: #fff;
-}
-
-#hero h2 {
-  color: #eee;
-  margin-bottom: 50px;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-#hero .btn-get-started {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 28px 10px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  border: 1px solid #fff;
-  color: #fff;
-}
-
-#hero .btn-get-started:hover {
-  background: #fff;
-  color: #70b9b0;
-  border: 1px solid #70b9b0;
-}
-
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(171, 211, 207, 0.85);
+    overflow: hidden;
+    position: relative;
   }
-}
 
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+  #hero .carousel,
+  #hero .carousel-inner,
+  #hero .carousel-item,
+  #hero .carousel-item::before {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  #hero .carousel-item::before {
+    content: "";
+    background-color: rgba(64, 89, 86, 0.85);
+  }
+
+  #hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 50px;
+    right: 50px;
+  }
+
+  #hero .container {
+    text-align: center;
   }
 
   #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
   }
-}
+
+  #hero p {
+    animation-delay: 0.4s;
+    margin: 0 auto 30px auto;
+    color: #fff;
+  }
+
+  #hero .carousel-inner .carousel-item {
+    transition-property: opacity;
+    background-position: center top;
+  }
+
+  #hero .carousel-inner .carousel-item,
+  #hero .carousel-inner .active.carousel-item-start,
+  #hero .carousel-inner .active.carousel-item-end {
+    opacity: 0;
+  }
+
+  #hero .carousel-inner .active,
+  #hero .carousel-inner .carousel-item-next.carousel-item-start,
+  #hero .carousel-inner .carousel-item-prev.carousel-item-end {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  #hero .carousel-control-next-icon,
+  #hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 30px;
+    line-height: 0;
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.5);
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #hero .carousel-control-next-icon:hover,
+  #hero .carousel-control-prev-icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  #hero .carousel-indicators li {
+    list-style-type: none;
+    cursor: pointer;
+    background: #fff;
+    overflow: hidden;
+    border: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #hero .carousel-indicators li.active {
+    opacity: 1;
+    background: #5cb874;
+  }
+
+  #hero .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 4px;
+    transition: 0.5s;
+    line-height: 1;
+    color: #fff;
+    animation-delay: 0.8s;
+    background: #5cb874;
+  }
+
+  #hero .btn-get-started:hover {
+    background: #6ec083;
+  }
+
+  @media (max-width: 992px) {
+    #hero {
+      height: 100vh;
+    }
+
+    #hero .carousel-container {
+      top: 66px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hero h2 {
+      font-size: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    #hero .carousel-control-prev,
+    #hero .carousel-control-next {
+      width: 5%;
+    }
+  }
+
+  @media (max-height: 500px) {
+    #hero {
+      height: 120vh;
+    }
+  }
 
 /*--------------------------------------------------------------
 # About Us
@@ -526,6 +605,11 @@ section {
 
 .about p:last-child {
   margin-bottom: 0;
+}
+
+.about-btext{
+    font-size: 25px;
+    font-weight: bold;
 }
 
 /*--------------------------------------------------------------
