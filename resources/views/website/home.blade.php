@@ -44,105 +44,25 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#service">Service</a></li>
           <li><a class="nav-link scrollto" href="#products">Our Products</a></li>
-          <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Design</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a class="nav-link scrollto" href="#portfolio"><span>Design</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="dropdown"><a href=""><span>Man</span> <i class="bi bi-chevron-right"></i></a>
+            @foreach($categories as $category)
+              <li class="dropdown"><a class="nav-link scrollto" href="#{{$category->slug}}"><span>{{$category->category_name}}</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="">T-SHIRT</a></li>
-                  <li><a href="">POLO</a></li>
-                  <li><a href="">Hoodies</a></li>
-                  <li><a href="">Sweatshirts</a></li>
-                  <li><a href="">SWEATERS & CARDIGANS</a></li>
-                  <li><a href="">Shirt </a></li>
-                  <li><a href="">Jacket </a></li>
-                  <li><a href="">Jeans </a></li>
-                  <li><a href="">Pants</a></li>
-                  <li><a href="">Cargo </a></li>
-                  <li><a href="">Linen  </a></li>
-                  <li><a href="">Shorts </a></li>
-                  <li><a href="">Swimwear </a></li>
-                  <li><a href="">Cap</a></li>
+                  @foreach($category->subCategories as $scat)
+                    <li><a class="nav-link scrollto" href="#{{$scat->slug}}">{{$scat->name}}</a></li>
+                  @endforeach
                 </ul>
               </li>
-              <li class="dropdown"><a href="#"><span>WOMAN</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="">T-SHIRT</a></li>
-                  <li><a href="">Knit wear </a></li>
-                  <li><a href="">SWEATERS & CARDIGANS</a></li>
-                  <li><a href="">Shirt </a></li>
-                  <li><a href="">Jacket </a></li>
-                  <li><a href="">Jeans </a></li>
-                  <li><a href="">Pants</a></li>
-                  <li><a href="">Skirts </a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>KIDS ( Boys & Girls)</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="">TEE-SHIRT</a></li>
-                  <li><a href="">DRESS</a></li>
-                  <li><a href="">TROUSERS - JOGGING PANTS</a></li>
-                  <li><a href="">JEANS</a></li>
-                  <li><a href="">SHIRT - BLOUSE</a></li>
-                  <li><a href="">SWEATSHIRT </a></li>
-                  <li><a href="">PULLOVER - CARDIGAN </a></li>
-                  <li><a href="">SKIRT </a></li>
-                  <li><a href="">SHORTS</a></li>
-                  <li><a href="">JUMPSUITS - DUNGAREES </a></li>
-                  <li><a href="">LEGGINGS - TREGGINGS  </a></li>
-                  <li><a href="">TROUSERS SIZE + </a></li>
-                  <li><a href="">SWIMWEAR </a></li>
-                  <li><a href="">ROLL-NECK-JUMPER </a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Outwear</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="">Light hooded padded jacket</a></li>
-                  <li><a href="">Warm padded jacket with high collar</a></li>
-                  <li><a href="">Light sleeveless padded jacket with round neck</a></li>
-                  <li><a href="">Biker down jacket</a></li>
-                  <li><a href="">Sleeveless padded jacket</a></li>
-                  <li><a href="">Extreme cold hooded puffer jacket</a></li>
-                  <li><a href="">Warm sleeveless down jacket</a></li>
-                  <li><a href="">Lightweight water-repellent sleeveless down jacket</a></li>
-                  <li><a href="">KIDS JACKET</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Workwear</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="">Workwear Shorts</a></li>
-                  <li><a href="">Workwear Trouser</a></li>
-                  <li><a href="">Work Dungarees</a></li>
-                  <li><a href="">HV Sweatpants</a></li>
-                  <li><a href="">HV Trouser</a></li>
-                  <li><a href="">HV Sweatshirt</a></li>
-                  <li><a href="">Reflective Softshell Jacket</a></li>
-                  <li><a href="">Work Jacket</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Active Wear</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="">Medical Shirt</a></li>
-                  <li><a href="">Medical Pants</a></li>
-                  <li><a href="">Medical Apron</a></li>
-                  <li><a href="">Long lab Coat</a></li>
-                  <li><a href="">Medical jacket</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Medical Wear</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="">Jog Pants</a></li>
-                  <li><a href="">Breathable Hoodie</a></li>
-                  <li><a href="">Durable Hoodie</a></li>
-                  <li><a href="">Weekend Pant</a></li>
-                  <li><a href="">Thermal Trouser</a></li>
-                  <li><a href="">Long underwear</a></li>
-                </ul>
-              </li>
+              @endforeach
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#portfolio"><span>Portfolio</span></a></li>
+
+          <li><a class="nav-link scrollto" href="#clients"><span>Certificates</span></a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#buyers">Buyers</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -249,7 +169,7 @@
     </section><!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <section id="services" class="services">
       <div class="container">
 
         <div class="section-title">
@@ -308,12 +228,63 @@
       </div>
     </section><!-- End Services Section -->
 
+    <section id="service" class="services section-bg">
+        <div class="container">
+
+          <div class="section-title">
+            <h2 class="fw-bold">Our Strength</h2>
+            <h4 class="fw-bold">END TO END SOURCING SOLUTION</h4>
+          </div>
+
+          <div class="row align-items-start">
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3">
+                    <h3 class="text-center">Fast Lead Time</h3>
+                    <p style="text-align: justify">Nothing is more important than getting your garments on time for your launch. Once the order is confirmed, we will send each of our clients a strategic production plan based on the target ex-factory date to ensure the bulk can be shipped out on time. Our sampling lead time is 5-7 days not including the shipping time, and our bulk production lead time is 25-30 days after the prior-production (PP) samples are approved.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3">
+                    <h3 class="text-center">Flexible Minimum</h3>
+                    <p style="text-align: justify">What makes us stand out is that we can work with flexible MOQ We believe in fostering the growth of small to medium-sized brands, and we recognize that keeping production quantities manageable is crucial for your success. That’s why we provide low Minimum Order Quantities (MOQs) that cater to your specific needs. Our flexible approach empowers you to launch new products with confidence, test different market segments, and adapt to changing demands without the burden of excess inventory. Your triumph is at the heart of our business philosophy, and we are dedicated to supporting your growth every step of the way. We will endeavor to meet your needs and requirements.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3">
+                    <h3 class="text-center">Competitive Price Point </h3>
+                    <p style="text-align: justify">Being in garment industry for more than five years, we have comprehensive networks with various suppliers, including trims, fabrics and other accessories, empowering us to keep our price competitive and more efficient to our clients. We handle our clients’ shipments constantly as well. It saves our clients a lot of effort, and also help them to save shipping costs since we’ve been working with our nominated forwarders for years.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3">
+                    <h3 class="text-center">Quick Sampling</h3>
+                    <p style="text-align: justify">Bring your creative vision to life with the support of our skilled design team. We understand the importance of seeing your ideas materialize before making a commitment, which is why we offer complimentary quotes and free shipping for samples. Whether you’re experimenting with new materials, styles, or prints, our hassle-free sampling process allows you to fine-tune your designs until they perfectly align with your vision, all without incurring additional costs.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3">
+                    <h3 class="text-center">Flexible Payment Terms </h3>
+                    <p style="text-align: justify">Our Factories have strength in offering flexible payment terms. Providing unique financial needs to our customers for long lasting partnership. </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3">
+                    <h3 class="text-center">Ethical and sustainable</h3>
+                    <p style="text-align: justify">Customer can offer fashion apparels that not only reduces the impact on the environment but is also mindful of the people who work to produce the garments. Put simply, it is fashion that is ethically made and environmentally friendly. This includes using eco-friendly materials, such as organic cotton, hemp, and bamboo, and implementing sustainable production practices using less water and energy. Additionally, there will likely be an increased focus on circular fashion, which involves designing clothes to be reused, recycled, or repurposed.</p>
+                </div>
+            </div>
+          </div>
+
+
+        </div>
+    </section><!-- End Services Section -->
+
     <section id="products" class="team products">
         <div class="container">
 
           <div class="section-title">
             <h2 class="fw-bold">Our Products</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h3 class="fw-bold">Profession, Small Batch Production, High Quality Manufacturing</h3>
           </div>
 
           <div class="row gy-4">
@@ -366,7 +337,10 @@
 
         <div class="text-center">
           <h3>Our profile</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>With years of experience in the industry, <b>INDIGODYE SOURCES</b> is here to serve our customers, and take the stress out of the sampling to production process. We have helped our clients and grow their clothing line, and helped brands that have been in this industry for years to develop premium products for their consumers. .
+            <br>
+            If you are looking for a partner to grow and scale with you, we can fill your needs!
+            </p>
           <a class="cta-btn" href="#">Download</a>
         </div>
 
@@ -385,768 +359,28 @@
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Man</li>
-              <li data-filter=".filter-card">Woman</li>
-              <li data-filter=".filter-web">Kids</li>
-              <li data-filter=".filter-or">Outwear</li>
-              <li data-filter=".filter-wr">Workwear</li>
-              <li data-filter=".filter-med">Medical Wear</li>
-              <li data-filter=".filter-ar">Active Wear</li>
+              @foreach ($categories as $cat)
+                <li data-filter=".filter-{{$cat->slug}}">{{$cat->category_name}}</li>
+              @endforeach
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1">App 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
+            @foreach ($products as $product)
+            <div id="{{$product->subCategory->slug}}" class="col-lg-4 col-md-6 portfolio-item filter-{{$product->category->slug}}">
+                <div class="portfolio-wrap">
+                  <img src="{{asset('assets/img/products/'.$product->image)}}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h3><a href="{{asset('assets/img/products/'.$product->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{$product->product_name}}">{{$product->product_name}}</a></h3>
+                    <div>
+                      <a href="{{asset('assets/img/products/'.$product->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{$product->product_name}}"><i class="bi bi-plus"></i></a>
+                      {{-- <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a> --}}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3">Web 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2">App 2</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/W1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/W1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2">Card 2</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/W1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2">Web 2</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/W2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/W2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1">Card 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/W2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/W3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/W3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3">Card 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/W3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/W4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/W4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3">Card 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/W4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/W5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/W5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3">Card 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/W5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/W6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/W6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3">Card 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/W6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M10.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M11.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k11.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M12.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M12.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M12.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/k10.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/k10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/k10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M13.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M13.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M13.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/W7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/W7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/W7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/M14.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/M14.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/M14.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o3.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o3.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o3.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-or">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/o8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/o8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/o8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr3.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-wr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/wr8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/wr8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/wr8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-med">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/md1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/md1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/md1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-med">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/md2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/md2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/md2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-med">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/md3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/md3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/md3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-med">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/md4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/md4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/md4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-med">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/md5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/md5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/md5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ar">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/a1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/a1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ar">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/a2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/a2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ar">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/a3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/a3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ar">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/a4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/a4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ar">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/a5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1">Web 1</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/a5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ar">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/a6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/a6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3">App 3</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/a6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+            @endforeach
 
         </div>
 
@@ -1184,7 +418,7 @@
 
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="client-logo">
-                    <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" width="120px">
                   </div>
                 </div>
 
@@ -1208,7 +442,7 @@
 
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="client-logo">
-                    <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+                    <img src="assets/img/clients/client-8.png" class="img-fluid" alt="" width="120px">
                   </div>
                 </div>
 
@@ -1224,44 +458,20 @@
       <div class="container">
 
         <div class="section-title">
-          <h2 class="fw-bold">Our Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2 class="fw-bold">Meet our Founder</h2>
         </div>
 
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" alt="">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-              </p>
-
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6 col-md-6">
+            <div class="founder text-center">
+              <img src="assets/img/founder.jpg" alt="" class="img-fluid">
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 col-md-6">
             <div class="member">
-              <img src="assets/img/team/team-2.jpg" alt="">
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
               <p>
-                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                We decided to create a professional organization at the source to providing solutions and adding value to the supply chain. <b>INDIGODYE SOURCES</b> has earned its name, value and credibility through the smart work, efforts and strong commitment towards quality products for every customer. We believe in providing our customer with high quality product along with the high standard of service because we feel that product and service are integral part of each other. We assure our customers of highest quality standards in all respect and stand behind our product. We put great quality management systems being followed at our Factories. As the Founder and CEO of INDIGODYE SOURCES, I see our success target as quality Products at all times and also innovative perspective. I would like to express my thanks to everyone who kept sharing this passion with us.
               </p>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <img src="assets/img/team/team-3.jpg" alt="">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-              </p>
-
             </div>
           </div>
 
@@ -1270,52 +480,120 @@
       </div>
     </section><!-- End Our Team Section -->
 
+    <section id="buyers" class="clients section-bg">
+        <div class="container">
+
+            <div class="section-title">
+                <h2 class="fw-bold">Buyers</h2>
+                <p class="fw-bold">Buyers List</p>
+              </div>
+
+          <div class="row no-gutters clearfix wow fadeInUp justify-content-center">
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b1.png" class="img-fluid" alt="" width="60px">
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b2.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b3.png" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b4.jpg" class="img-fluid" alt="" width="120px">
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b5.png" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters clearfix wow fadeInUp justify-content-center">
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b6.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b7.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-xs-6">
+              <div class="client-logo buyer-logo">
+                <img src="assets/img/buyers/b8.jpg" class="img-fluid" alt="" width="120px">
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-xs-6">
+                <div class="client-logo buyer-logo">
+                  <img src="assets/img/buyers/b9.jpg" class="img-fluid" alt="">
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-xs-6">
+                <div class="client-logo buyer-logo">
+                  <img src="assets/img/buyers/b10.jpg" class="img-fluid" alt="" width="120px">
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </section>
+
     <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact section-bg">
+    <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact Us</h2>
-          {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
+          <h2 class="fw-bold">Contact Us</h2>
         </div>
 
         <div class="row">
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-6 col-md-6">
             <div class="contact-about">
               <h3>INDIGODYE SOURCES</h3>
               <p>We are an Apparel Buying and Sourcing company</p>
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6">
+            </div>
+
             <div class="info">
-              <div>
-                <i class="bi bi-geo-alt"></i>
-                <p>House 31, Road 09, Section 2,<br>
-                    Mirpur, Dhaka-1216, Bangladesh</p>
-              </div>
+                <div>
+                  <i class="bi bi-geo-alt"></i>
+                  <p>House 31, Road 09, Section 2,<br>
+                      Mirpur, Dhaka-1216, Bangladesh</p>
+                </div>
 
-              <div>
-                <i class="bi bi-envelope"></i>
-                <p>ruhin@indigodyesources.com</p>
-              </div>
+                <div>
+                  <i class="bi bi-envelope"></i>
+                  <p>ruhin@indigodyesources.com</p>
+                </div>
 
-              <div>
-                <i class="bi bi-phone"></i>
-                <p>+8801799467987</p>
-              </div>
+                <div>
+                  <i class="bi bi-phone"></i>
+                  <p>+8801799467987</p>
+                </div>
 
-            </div>
+              </div>
           </div>
 
-          <div class="col-lg-5 col-md-12">
+          <div class="col-lg-6 col-md-12">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -1343,23 +621,72 @@
       </div>
     </section><!-- End Contact Us Section -->
 
-    <!-- ======= Map Section ======= -->
-    <section class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sbg!4v1579767901424!5m2!1sen!2sbg" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    </section><!-- End Map Section -->
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" class="contact">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>INDIGODYE</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <p class="fw-bold mb-1">Products and Services</p>
+                <ul class="list-unstyled">
+                    <li><a class="nav-link scrollto" href="#products">Fashion</a></li>
+                    <li><a class="nav-link scrollto" href="#products">Sports</a></li>
+                    <li><a class="nav-link scrollto" href="#products">Essentials</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <p class="fw-bold mb-1">Company Info</p>
+                <ul class="list-unstyled">
+                    <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <p class="fw-bold mb-1">Customer Enquiries</p>
+                <ul class="list-unstyled">
+                    <li><a class="nav-link scrollto active" href="#contact">Contact Us</a></li>
+                    <li><a class="nav-link scrollto" href="#clients">Certificates</a></li>
+                    <li><a class="nav-link scrollto" href="#buyers">Buyers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-6">
+                <p class="fw-bold mb-1">Product Types</p>
+                <ul class="list-unstyled">
+                    <li><a class="nav-link scrollto active" href="#portfolio">Man</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Women</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Kids</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                {{-- <p class="fw-bold mb-1">Products and Services</p> --}}
+                <ul class="list-unstyled">
+                    <li><a class="nav-link scrollto active" href="#portfolio">Outwear</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Workwear</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Active Wear</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Medical Wear</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="social-links text-end">
+                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <div class="credits  text-end">
+                    Designed by <a href="{{url('/')}}">INDIGODYE SOURCES</a>
+                </div>
 
-        Designed by <a href="{{url('/')}}">INDIGODYE SOURCES</a>
-      </div>
+                <div class="copyright  text-end">
+                    &copy; Copyright <strong><span>INDIGODYE</span></strong>. All Rights Reserved
+                </div>
+
+            </div>
+        </div>
+
     </div>
   </footer><!-- End #footer -->
 

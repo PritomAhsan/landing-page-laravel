@@ -12,9 +12,9 @@
         <div class="card-header">
             <h3 class="card-title">Products List</h3>
             <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                <i class="fas fa-minus"></i>
-                </button>
+                <a href="{{url('admin/add-product')}}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                </a>
             </div>
         </div>
         <div class="card-body p-0">
@@ -23,6 +23,7 @@
                     <tr>
                         <th>#</th>
                         <th>Category</th>
+                        <th>Sub Category</th>
                         <th>Product name</th>
                         <th>Image</th>
                         <th>Status</th>
@@ -33,12 +34,13 @@
                 @foreach($products as $product)
                     <tr>
                         <td>#</td>
-                        <td>{{$product->category_id}}</td>
+                        <td>{{$product->category->category_name}}</td>
+                        <td>{{$product->subCategory->name}}</td>
                         <td>{{$product->product_name}}</td>
-                        <td>{{$product->image}}</td>
-                        <td>{{$product->status}}</td>
+                        <td><img src="{{asset('assets/img/products/'.$product->image)}}" width="100"></td>
+                        <td>{{$product->status == 1 ? "Active" : "Inactive"}}</td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="{{url('admin/product-edit/'.$product->id)}}">
+                            <a class="btn btn-info btn-sm" href="{{url('admin/edit-product/'.$product->id)}}">
                                 <i class="fas fa-pencil-alt"></i> Edit
                             </a>
                         </td>

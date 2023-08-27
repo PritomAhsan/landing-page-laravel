@@ -421,6 +421,7 @@ section {
     background-color: rgba(171, 211, 207, 0.85);
     overflow: hidden;
     position: relative;
+    margin-top: 80px;
   }
 
   #hero .carousel,
@@ -922,6 +923,13 @@ section {
   background: #fff;
 }
 
+.founder img{
+    max-width: 60%;
+  border-radius: 50%;
+  margin: 0 0 30px 0;
+}
+
+
 .team .member img {
   max-width: 60%;
   border-radius: 50%;
@@ -996,6 +1004,10 @@ section {
     border-left: 1px solid #e7e7e7;
 }
 
+.buyer-logo{
+    padding: 10px !important;
+}
+
 .clients .client-logo {
     padding: 64px;
     display: flex;
@@ -1042,7 +1054,7 @@ section {
   justify-content: center;
   font-size: 16px;
   background: #fff;
-  color: #70b9b0;
+  color: #344d97;
   line-height: 0;
   margin-right: 4px;
   border-radius: 50%;

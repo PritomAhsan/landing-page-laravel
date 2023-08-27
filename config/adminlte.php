@@ -251,10 +251,15 @@ return [
             'url'         => 'admin/users',
             'icon'        => 'far fa-fw fa-user',
         ],
-        
+
         [
             'text' => 'Categories',
             'url'  => 'admin/categories',
+            'icon' => 'fas fa-fw fa-cog',
+        ],
+        [
+            'text' => 'Sub Categories',
+            'url'  => 'admin/sub-categories',
             'icon' => 'fas fa-fw fa-cog',
         ],
         [
@@ -262,7 +267,7 @@ return [
             'url'  => 'admin/products',
             'icon' => 'fas fa-fw fa-cubes',
         ],
-        
+
     ],
 
     /*
